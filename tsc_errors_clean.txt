@@ -1,0 +1,44 @@
+﻿src/app/clubs/[id]/page.tsx(11,17): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(13,17): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(14,21): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(15,43): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(66,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(68,30): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(72,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(74,31): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(77,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(78,11): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(79,9): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(80,7): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(84,36): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(85,9): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(87,23): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(88,9): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/clubs/[id]/page.tsx(90,28): error TS1005: '}' expected.
+src/app/clubs/[id]/page.tsx(91,9): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(14,17): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(16,17): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(17,21): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(18,47): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(69,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(71,30): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(75,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(77,31): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(80,13): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(81,11): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(82,9): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(83,7): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(86,27): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(86,50): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(87,37): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(87,62): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(88,61): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(88,106): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(89,38): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(89,52): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(90,41): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(90,94): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(91,53): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(91,61): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+src/app/dashboard/personalized/page.tsx(92,45): error TS1005: '}' expected.
+src/app/dashboard/personalized/page.tsx(92,76): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?

@@ -1,65 +1,301 @@
-import Image from "next/image";
-
-export default function Home() {
+import Link from "next/link";
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* Navigation */}
+<nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0px_20px_40px_rgba(44,47,48,0.06)] font-['Manrope'] antialiased tracking-tight">
+<div className="flex justify-between items-center h-20 px-8 max-w-full mx-auto">
+<div className="flex items-center gap-12">
+<Link className="text-2xl font-black tracking-tighter bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent" href="/">CampusPulse</Link>
+<div className="hidden md:flex items-center gap-8">
+<Link className="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 py-1 transition-all duration-200" href="/events">Explore Events</Link>
+<Link className="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors py-1" href="/clubs">Clubs</Link>
+</div>
+</div>
+<div className="flex items-center gap-6">
+<div className="hidden md:flex items-center gap-4 mr-4">
+<button className="p-2 text-slate-500 hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">
+<span className="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button className="p-2 text-slate-500 hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">
+<span className="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div className="flex items-center gap-3">
+<Link href="/login"><button className="px-5 py-2 text-indigo-600 font-semibold hover:scale-105 transition-all duration-200">Login</button></Link>
+<Link href="/login"><button className="px-6 py-2.5 signature-gradient text-on-primary rounded-xl font-bold hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">Register</button></Link>
+</div>
+</div>
+</div>
+</nav>
+<main className="pt-20">
+{/* Hero Section */}
+<section className="relative overflow-hidden px-8 py-24 md:py-32">
+<div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div className="z-10">
+<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-container/20 text-primary mb-8">
+<span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span className="text-xs font-bold uppercase tracking-wider">Live Campus Updates</span>
+</div>
+<h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1] mb-6">
+                        Discover Campus <span className="text-gradient">Events &amp; Clubs</span>
+</h1>
+<p className="text-on-surface-variant text-xl md:text-2xl leading-relaxed mb-10 max-w-xl">
+                        All your college activities in one place. Connect with peers, master new skills, and shape your student life experience.
+                    </p>
+<div className="flex flex-wrap gap-4">
+<Link href="/events"><button className="px-8 py-4 signature-gradient text-on-primary rounded-xl font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all duration-300">Explore Events</button></Link>
+<Link href="/clubs"><button className="px-8 py-4 bg-surface-container-highest text-on-surface rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300">Join a Club</button></Link>
+</div>
+</div>
+<div className="relative">
+<div className="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div className="absolute -bottom-20 -left-20 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl"></div>
+<div className="relative rounded-xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Campus Life" className="w-full h-[500px] object-cover" data-alt="Modern university campus building with glass facade at sunset with vibrant purple and orange sky reflecting in windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbn5-tVz3BEhe7xucAnOXWRYCKZjOYk9Wnc2isb6R9ATUw3eBDwWzhBAvxRxJuEcEOoP1Q0rqyauXz391jK8lEgbKiR2QqWlZTejjkjeKeBOuhC1BjtnBXeZ0-2RGk07Bue9cltcDTy9qlUD8q6mdA4uNQ_aZT7hXqd4LoUnSbjB-DTmGvVHjrHCHbkul7WrM3SAzyAB2rTKxHK6nMwpRj8yt4LgEqq_Kz93NoRVl5dsbqO8C_kaUTIMglBol5C6gG-Lt0k7_agmNE"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+{/* Featured Events */}
+<section className="px-8 py-24 bg-surface-container-low">
+<div className="max-w-7xl mx-auto">
+<div className="flex justify-between items-end mb-16">
+<div>
+<h2 className="font-headline text-4xl font-extrabold mb-4">Featured Events</h2>
+<p className="text-on-surface-variant">Handpicked opportunities for growth and fun this week.</p>
+</div>
+<button className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all duration-200">
+                        View All <span className="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+{/* Event Card 1 */}
+<div className="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300">
+<div className="h-48 relative overflow-hidden">
+<img alt="Hackathon" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Group of students working on laptops in a high-tech lab setting with blue neon accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAARJ6RmK5Rn1bO05iZdVo4YyHLNdkvn6MWuOfvdVMsAzYnHARrqfvm-gD78difCA-4tnYRH36OHhNIUJocLv6vz_JKKyOW1IdIAmLyWjeRZV-25i9NbGil5YZiTUx79YxhqQ1qoloZPwg8HW1kW0v_N9lcJf_SW2MByZH8pbp2u6zOLM7T9I9r3zxmDN_9ChaA7TgSMEWS2O56zj301DnXjBzewAk1eMwjpfb42WpvwYheG5pu587DKpWmaPE7CBpCXYeqqQWH11Wn"/>
+<div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">Tech</div>
+</div>
+<div className="p-8">
+<div className="flex items-center gap-2 text-tertiary mb-3">
+<span className="material-symbols-outlined text-sm">calendar_today</span>
+<span className="text-xs font-bold">Oct 24, 2024</span>
+</div>
+<h3 className="font-headline text-xl font-bold mb-3">CodeSpring Hackathon</h3>
+<p className="text-on-surface-variant text-sm leading-relaxed mb-6">Build the future in 48 hours. Collaborate with top talent and win amazing prizes.</p>
+<Link href="/events"><button className="w-full py-3 bg-surface-container-low text-on-surface font-bold rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-all duration-200">View Details</button></Link>
+</div>
+</div>
+{/* Event Card 2 */}
+<div className="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300">
+<div className="h-48 relative overflow-hidden">
+<img alt="Workshop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional workshop setting with a speaker presenting to a diverse group of focused young adults in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARTouw7-Mn1NABtcjp154lNCxUpD7I4m6Jm-iqTjwTwQKakTvYjWceNdKG5uVMFMXSnppHF1R2gB-BGbfui_FrIf_rblvNk72MrplGWRPnX9N5QEDQwDa_jB8sH08E57cxAFZ0uowTLOtwm7SyPfjQGnZJvcXC2YL0ZQeNCV2AxDpWImzpAYWSmXV0iKj5m0qUvomhFdciS36P680Vv8PyE_AIgJuxnBz1TVWJisCyJiWObwLdDnzgTJ6Oxhzw4OCWFi2eX54PZLgM"/>
+<div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-secondary">Career</div>
+</div>
+<div className="p-8">
+<div className="flex items-center gap-2 text-tertiary mb-3">
+<span className="material-symbols-outlined text-sm">calendar_today</span>
+<span className="text-xs font-bold">Oct 27, 2024</span>
+</div>
+<h3 className="font-headline text-xl font-bold mb-3">UI/UX Design Workshop</h3>
+<p className="text-on-surface-variant text-sm leading-relaxed mb-6">Learn the fundamentals of user experience and visual design from industry experts.</p>
+<Link href="/events"><button className="w-full py-3 bg-surface-container-low text-on-surface font-bold rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-all duration-200">View Details</button></Link>
+</div>
+</div>
+{/* Event Card 3 */}
+<div className="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300">
+<div className="h-48 relative overflow-hidden">
+<img alt="Cultural Fest" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Vibrant outdoor music festival at night with colorful stage lights, silhouettes of a dancing crowd, and confetti" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNB6bVg6h1AgE3QeGgzgOa18-TVE1j4UQIZXZz6pVXP_AJ-d58fL8YhVTwsEMIvvA6BIM3j9oWNRuTl506YeLjpZ3LM_8HZiNnapgqRp0gX2X81fyllupyM-7wQdfUMsEFew-omnG3o-hNKS65MwOijVbp4Th8StyQp6oSiWFjuwLridGBAuF_clpGRZ4XZPwAmPAgrp1sFlBpqDM5B6_FRDA6UQjjNamzCyC75-LZxZ808NWdTqq-jlHGE6zAaZWqI7wLqAVoomG"/>
+<div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-tertiary">Cultural</div>
+</div>
+<div className="p-8">
+<div className="flex items-center gap-2 text-tertiary mb-3">
+<span className="material-symbols-outlined text-sm">calendar_today</span>
+<span className="text-xs font-bold">Nov 02, 2024</span>
+</div>
+<h3 className="font-headline text-xl font-bold mb-3">Pulse Festival 2024</h3>
+<p className="text-on-surface-variant text-sm leading-relaxed mb-6">The biggest campus celebration featuring live music, food stalls, and art exhibitions.</p>
+<Link href="/events"><button className="w-full py-3 bg-surface-container-low text-on-surface font-bold rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-all duration-200">View Details</button></Link>
+</div>
+</div>
+</div>
+</div>
+</section>
+{/* Why Use Section (Bento Inspired) */}
+<section className="px-8 py-24">
+<div className="max-w-7xl mx-auto">
+<div className="text-center mb-16">
+<h2 className="font-headline text-4xl font-extrabold mb-4">Elevate Your Campus Experience</h2>
+<p className="text-on-surface-variant max-w-2xl mx-auto">CampusPulse bridges the gap between students and opportunities through intelligent automation and community building.</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+{/* Feature 1 */}
+<div className="md:col-span-1 bg-primary-container/10 p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div className="w-14 h-14 signature-gradient rounded-xl flex items-center justify-center text-white mb-8 shadow-lg shadow-primary/20">
+<span className="material-symbols-outlined text-3xl">event_busy</span>
+</div>
+<h3 className="font-headline text-2xl font-bold mb-4">Never miss deadlines</h3>
+<p className="text-on-surface-variant leading-relaxed">Sync campus event registrations directly with your academic calendar. Stay ahead of every schedule.</p>
+</div>
+</div>
+{/* Feature 2 */}
+<div className="md:col-span-1 bg-surface-container p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div className="w-14 h-14 bg-tertiary rounded-xl flex items-center justify-center text-white mb-8 shadow-lg shadow-tertiary/20">
+<span className="material-symbols-outlined text-3xl">notifications_active</span>
+</div>
+<h3 className="font-headline text-2xl font-bold mb-4">Get reminders</h3>
+<p className="text-on-surface-variant leading-relaxed">Receive smart notifications for club meetings, workshops, and early-bird event registrations tailored to your interests.</p>
+</div>
+</div>
+{/* Feature 3 */}
+<div className="md:col-span-1 bg-secondary-container/20 p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center text-white mb-8 shadow-lg shadow-secondary/20">
+<span className="material-symbols-outlined text-3xl">group</span>
+</div>
+<h3 className="font-headline text-2xl font-bold mb-4">Join communities</h3>
+<p className="text-on-surface-variant leading-relaxed">Find like-minded people. Join specialized clubs and grow your network within the university ecosystem.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+{/* Clubs Section */}
+<section className="px-8 py-24 bg-surface-container-low overflow-hidden relative">
+<div className="absolute top-0 right-0 p-32 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div className="max-w-7xl mx-auto">
+<div className="flex items-center justify-between mb-16">
+<h2 className="font-headline text-4xl font-extrabold">Active Clubs</h2>
+<div className="flex gap-2">
+<button className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+<span className="material-symbols-outlined">chevron_left</span>
+</button>
+<button className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:bg-primary hover:text-white transition-all">
+<span className="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+{/* Club 1 */}
+<div className="bg-surface-container-lowest p-8 rounded-lg hover:scale-105 hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300 group">
+<div className="flex items-center justify-between mb-6">
+<div className="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+<span className="material-symbols-outlined" data-icon="terminal">terminal</span>
+</div>
+<span className="text-xs font-bold text-slate-400">1.2k Members</span>
+</div>
+<h3 className="font-headline text-lg font-bold mb-2">Coding Club</h3>
+<p className="text-on-surface-variant text-sm mb-6">Sharpen your logic and build innovative software solutions.</p>
+<button className="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                            View Club <span className="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+{/* Club 2 */}
+<div className="bg-surface-container-lowest p-8 rounded-lg hover:scale-105 hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300 group">
+<div className="flex items-center justify-between mb-6">
+<div className="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600">
+<span className="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<span className="text-xs font-bold text-slate-400">850 Members</span>
+</div>
+<h3 className="font-headline text-lg font-bold mb-2">Robotics Club</h3>
+<p className="text-on-surface-variant text-sm mb-6">Dive into the world of hardware, sensors, and AI-driven bots.</p>
+<button className="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                            View Club <span className="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+{/* Club 3 */}
+<div className="bg-surface-container-lowest p-8 rounded-lg hover:scale-105 hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300 group">
+<div className="flex items-center justify-between mb-6">
+<div className="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-pink-600">
+<span className="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<span className="text-xs font-bold text-slate-400">2.1k Members</span>
+</div>
+<h3 className="font-headline text-lg font-bold mb-2">Music Club</h3>
+<p className="text-on-surface-variant text-sm mb-6">From classical to contemporary, find your rhythm here.</p>
+<button className="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                            View Club <span className="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+{/* Club 4 */}
+<div className="bg-surface-container-lowest p-8 rounded-lg hover:scale-105 hover:shadow-[0px_20px_40px_rgba(44,47,48,0.06)] transition-all duration-300 group">
+<div className="flex items-center justify-between mb-6">
+<div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+<span className="material-symbols-outlined" data-icon="brush">brush</span>
+</div>
+<span className="text-xs font-bold text-slate-400">600 Members</span>
+</div>
+<h3 className="font-headline text-lg font-bold mb-2">Creative Arts</h3>
+<p className="text-on-surface-variant text-sm mb-6">Express your vision through digital and traditional media.</p>
+<button className="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                            View Club <span className="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+{/* CTA Section */}
+<section className="px-8 py-24">
+<div className="max-w-7xl mx-auto">
+<div className="signature-gradient rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<div className="relative z-10 max-w-2xl mx-auto">
+<h2 className="font-headline text-4xl md:text-5xl font-extrabold text-on-primary mb-6">Ready to make the most of your college years?</h2>
+<p className="text-on-primary/80 text-lg mb-10">Join thousands of students who are already using CampusPulse to transform their campus life.</p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+<Link href="/login"><button className="px-10 py-5 bg-white text-primary rounded-xl font-bold text-lg hover:scale-105 hover:shadow-xl transition-all duration-300">Get Started for Free</button></Link>
+<button className="px-10 py-5 bg-transparent border-2 border-white/30 text-on-primary rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">Contact Support</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+{/* Footer */}
+<footer className="bg-slate-100 dark:bg-slate-950 w-full py-12">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div className="md:col-span-1">
+<Link className="font-['Manrope'] font-bold text-2xl text-slate-900 dark:text-slate-100 mb-6 block" href="/">CampusPulse</Link>
+<p className="font-['Inter'] text-sm text-slate-500 leading-relaxed mb-6">© 2024 CampusPulse. Editorial Experience for Student Life.</p>
+<div className="flex gap-4">
+<Link className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:text-indigo-600 transition-colors" href="/">
+<span className="material-symbols-outlined text-lg">public</span>
+</Link>
+<Link className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:text-indigo-600 transition-colors" href="/">
+<span className="material-symbols-outlined text-lg">alternate_email</span>
+</Link>
+</div>
+</div>
+<div>
+<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Navigation</h4>
+<ul className="space-y-4">
+<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/events">Explore Events</Link></li>
+<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/clubs">Clubs</Link></li>
+<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/calendar">Calendar</Link></li>
+</ul>
+</div>
+<div>
+<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Company</h4>
+<ul className="space-y-4 font-['Inter'] text-sm text-slate-500">
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">About</Link></li>
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Contact</Link></li>
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Support</Link></li>
+</ul>
+</div>
+<div>
+<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Legal</h4>
+<ul className="space-y-4 font-['Inter'] text-sm text-slate-500">
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Privacy</Link></li>
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Terms of Service</Link></li>
+<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Cookie Policy</Link></li>
+</ul>
+</div>
+</div>
+</footer>
+    </>
   );
 }
