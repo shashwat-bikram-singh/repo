@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
-
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -28,7 +29,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${inter.variable} ${manrope.variable} font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col antialiased`}>
-        {children}
+        <NavBar />
+        <div className="flex-1 w-full relative">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

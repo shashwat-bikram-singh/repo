@@ -3,28 +3,7 @@ export default function Page() {
   return (
     <>
       {/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-xl shadow-slate-900/5 flex justify-between items-center px-8 h-20 w-full">
-<div className="flex items-center gap-8">
-<Link href="/"><span className="text-2xl font-black tracking-tighter text-indigo-600 dark:text-indigo-400 font-headline">CampusPulse</span></Link>
-<div className="hidden md:flex gap-6">
-<Link className="text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-colors font-manrope tracking-tight font-bold" href="/">Discover</Link>
-<Link className="text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 font-manrope tracking-tight font-bold" href="/clubs">My Clubs</Link>
-<Link className="text-slate-500 dark:text-slate-400 hover:text-indigo-500 transition-colors font-manrope tracking-tight font-bold" href="/">Events</Link>
-</div>
-</div>
-<div className="flex items-center gap-4">
-<div className="hidden md:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
-<span className="material-symbols-outlined text-on-surface-variant mr-2">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-sm" placeholder="Search clubs..." type="text"/>
-</div>
-<button className="text-slate-500 hover:text-indigo-500 transition-all scale-95 active:opacity-80">
-<span className="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<div className="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container">
-<img alt="User profile" data-alt="close-up portrait of a smiling young professional man in a clean modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_GCDTvst2jpmH3wfaaLqNgvmxrzeJV7lvOQ7lMJfjrb6hyDg-Tffno6USnCiqzb3UXCbhl5OL60tTwSoufZspBXt5gAkBatMv6SoqepXHpzz0asFLL-1DGvlgUm0V71APHtSHlp7mNTNAHkTAzdDmY8mVyM2ylqGxMEsqvB4yrvuYVFYKXr9Q0HHJCtrGpoe6f2IDXac760NDaHAreSJt6Y35GZx0VcRhE-N1bh7kewJBHKeAZ_mXiWJsF2PRz2O80y1AVRQr_Hju"/>
-</div>
-</div>
-</nav>
+
 <main className="pt-20">
 {/* Hero Section */}
 <section className="relative px-8 pt-8">

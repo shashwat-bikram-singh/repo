@@ -3,31 +3,7 @@ export default function Page() {
   return (
     <>
       {/* Navigation */}
-<nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0px_20px_40px_rgba(44,47,48,0.06)] font-['Manrope'] antialiased tracking-tight">
-<div className="flex justify-between items-center h-20 px-8 max-w-full mx-auto">
-<div className="flex items-center gap-12">
-<Link className="text-2xl font-black tracking-tighter bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent" href="/">CampusPulse</Link>
-<div className="hidden md:flex items-center gap-8">
-<Link className="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 py-1 transition-all duration-200" href="/events">Explore Events</Link>
-<Link className="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors py-1" href="/clubs">Clubs</Link>
-</div>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden md:flex items-center gap-4 mr-4">
-<button className="p-2 text-slate-500 hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">
-<span className="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<button className="p-2 text-slate-500 hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">
-<span className="material-symbols-outlined" data-icon="bookmark">bookmark</span>
-</button>
-</div>
-<div className="flex items-center gap-3">
-<Link href="/login"><button className="px-5 py-2 text-indigo-600 font-semibold hover:scale-105 transition-all duration-200">Login</button></Link>
-<Link href="/login"><button className="px-6 py-2.5 signature-gradient text-on-primary rounded-xl font-bold hover:scale-105 hover:shadow-md transition-all duration-200 active:scale-95">Register</button></Link>
-</div>
-</div>
-</div>
-</nav>
+
 <main className="pt-20">
 {/* Hero Section */}
 <section className="relative overflow-hidden px-8 py-24 md:py-32">
@@ -256,46 +232,7 @@ export default function Page() {
 </section>
 </main>
 {/* Footer */}
-<footer className="bg-slate-100 dark:bg-slate-950 w-full py-12">
-<div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-<div className="md:col-span-1">
-<Link className="font-['Manrope'] font-bold text-2xl text-slate-900 dark:text-slate-100 mb-6 block" href="/">CampusPulse</Link>
-<p className="font-['Inter'] text-sm text-slate-500 leading-relaxed mb-6">© 2024 CampusPulse. Editorial Experience for Student Life.</p>
-<div className="flex gap-4">
-<Link className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:text-indigo-600 transition-colors" href="/">
-<span className="material-symbols-outlined text-lg">public</span>
-</Link>
-<Link className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:text-indigo-600 transition-colors" href="/">
-<span className="material-symbols-outlined text-lg">alternate_email</span>
-</Link>
-</div>
-</div>
-<div>
-<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Navigation</h4>
-<ul className="space-y-4">
-<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/events">Explore Events</Link></li>
-<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/clubs">Clubs</Link></li>
-<li><Link className="text-slate-500 hover:text-indigo-500 transition-colors text-sm" href="/calendar">Calendar</Link></li>
-</ul>
-</div>
-<div>
-<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Company</h4>
-<ul className="space-y-4 font-['Inter'] text-sm text-slate-500">
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">About</Link></li>
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Contact</Link></li>
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Support</Link></li>
-</ul>
-</div>
-<div>
-<h4 className="font-headline font-bold text-slate-900 dark:text-slate-100 mb-6">Legal</h4>
-<ul className="space-y-4 font-['Inter'] text-sm text-slate-500">
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Privacy</Link></li>
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Terms of Service</Link></li>
-<li><Link className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" href="/">Cookie Policy</Link></li>
-</ul>
-</div>
-</div>
-</footer>
+
     </>
   );
 }

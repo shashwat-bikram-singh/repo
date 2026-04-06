@@ -3,33 +3,7 @@ export default function Page() {
   return (
     <>
       {/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
-<div className="flex justify-between items-center px-8 py-4 max-w-full">
-<div className="flex items-center gap-8">
-<Link href="/"><span className="text-2xl font-black tracking-tighter text-indigo-600 dark:text-indigo-400 font-headline">CampusPulse</span></Link>
-<div className="hidden md:flex items-center gap-6">
-<Link className="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 font-manrope tracking-tight py-1" href="/">Events</Link>
-<Link className="text-slate-600 dark:text-slate-400 font-manrope tracking-tight hover:text-indigo-500 transition-colors duration-200 py-1" href="/clubs">Clubs</Link>
-<Link className="text-slate-600 dark:text-slate-400 font-manrope tracking-tight hover:text-indigo-500 transition-colors duration-200 py-1" href="/">Schedule</Link>
-<Link className="text-slate-600 dark:text-slate-400 font-manrope tracking-tight hover:text-indigo-500 transition-colors duration-200 py-1" href="/">Network</Link>
-</div>
-</div>
-<div className="flex items-center gap-4">
-<div className="hidden sm:flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
-<span className="material-symbols-outlined text-on-surface-variant text-sm">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search events..." type="text"/>
-</div>
-<div className="flex items-center gap-3">
-<button className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
-<button className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">favorite</button>
-<Link href="/login"><button className="signature-gradient text-on-primary px-6 py-2 rounded-xl font-bold scale-95 active:opacity-80 transition-transform">Register</button></Link>
-<div className="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="User profile" data-alt="close-up portrait of a cheerful young adult student with glasses and a friendly smile in a casual hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsC1E55iJ47fveAut-jKIaCnCUebb3NBtqk4p3qMkStNqben-HQET8e7lAgjef5DZNYvQek27Bn9KZr8h4bOmfEL5W6e7KbWqyRe4pv_5UCylh_TIshP0KHVvzWZXo8LAnuQJv5vUbTZ6I7Qho5aI8T5qIE6QS_kJiO_dxuwsKpzw9lIS1K2qn88-fzVLLRbdnC2QtLqSUwtWQqQtt9HbkhsPLdgXAWU7r4iOXDs3ldj-R1o3Vurny6FiWd0Zk81reNlizuG4gocqB"/>
-</div>
-</div>
-</div>
-</div>
-</nav>
+
 <main className="flex-grow pt-20">
 {/* Hero Header */}
 <header className="relative w-full h-[614px] min-h-[500px] overflow-hidden flex items-end">
@@ -256,20 +230,7 @@ export default function Page() {
 </div>
 </main>
 {/* Footer */}
-<footer className="w-full py-12 mt-auto bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-<div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-<div className="flex flex-col items-center md:items-start gap-2">
-<Link href="/"><span className="font-black text-slate-900 dark:text-white text-xl">CampusPulse</span></Link>
-<p className="font-manrope text-sm text-slate-500 dark:text-slate-400">© 2024 CampusPulse. Empowering Student Life.</p>
-</div>
-<div className="flex flex-wrap justify-center gap-8">
-<Link className="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-indigo-500" href="/">Privacy Policy</Link>
-<Link className="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-indigo-500" href="/">Terms of Service</Link>
-<Link className="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-indigo-500" href="/">Campus Map</Link>
-<Link className="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-indigo-500" href="/">Help Center</Link>
-</div>
-</div>
-</footer>
+
     </>
   );
 }

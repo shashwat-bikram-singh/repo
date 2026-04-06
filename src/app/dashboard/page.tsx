@@ -3,28 +3,7 @@ export default function Page() {
   return (
     <>
       {/* TopNavBar Shell */}
-<nav className="flex justify-between items-center w-full px-8 h-20 sticky top-0 z-50 bg-[#f5f6f7]/80 dark:bg-slate-900/80 backdrop-blur-xl">
-<div className="flex items-center gap-8">
-<Link href="/"><span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-[#4647d3] to-[#6a37d4] bg-clip-text text-transparent">CampusPulse</span></Link>
-<div className="hidden md:flex items-center gap-6">
-<Link className="text-[#2c2f30] dark:text-white font-bold border-b-2 border-[#6366F1] pb-1" href="/">Dashboard</Link>
-<Link className="text-[#595c5d] dark:text-slate-400 font-medium hover:text-[#2c2f30] dark:hover:text-white transition-colors" href="/calendar">Calendar</Link>
-<Link className="text-[#595c5d] dark:text-slate-400 font-medium hover:text-[#2c2f30] dark:hover:text-white transition-colors" href="/clubs">Clubs</Link>
-</div>
-</div>
-<div className="flex items-center gap-4">
-<div className="relative hidden sm:block">
-<div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-<span className="material-symbols-outlined text-on-surface-variant text-sm" data-icon="search">search</span>
-</div>
-<input className="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary-container w-64 transition-all" placeholder="Search events..." type="text"/>
-</div>
-<button className="p-2 hover:bg-[#eff1f2] dark:hover:bg-slate-800/50 rounded-full transition-all active:scale-95">
-<span className="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
-</button>
-<img alt="Student profile avatar" className="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Portrait of a smiling young college student with trendy glasses and short hair, soft natural indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGwHMCOVt-cShI2XzRdY31YOihcbVO-qdHlMHDAUsThzGA_X_E3T9BmcNb-DzumZWnrpHDO-pimot5OSjpybYWYOhD3R0bptmsqpcE_W_jcJRr9N067yAu4g3r3eKPGWMGmjgdpCciHVNf3xKYWhccfM8x-Hqm6yiSpJEe-8ssNl8k0NDU5thu-3WgqdWLrdwIDy1Xv6Nmppa3wMBSd7dcGBY0c5D3D24yuaXStLtZ0SpvCm8U3Cdl18H3Rav104deMYt8G3Vh0nHX"/>
-</div>
-</nav>
+
 <div className="flex">
 {/* SideNavBar Shell */}
 <aside className="hidden lg:flex flex-col py-8 gap-4 h-screen w-64 fixed left-0 top-0 bg-[#eff1f2] dark:bg-slate-800/50 mt-20">

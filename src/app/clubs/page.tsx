@@ -3,28 +3,7 @@ export default function Page() {
   return (
     <>
       {/* TopNavBar */}
-<nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0px_20px_40px_rgba(44,47,48,0.06)] h-20 px-8 flex justify-between items-center max-w-full mx-auto">
-<div className="flex items-center gap-12">
-<Link href="/"><span className="text-2xl font-black tracking-tighter bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-['Manrope'] antialiased tracking-tight" >CampusPulse</span></Link>
-<div className="hidden md:flex gap-8">
-<Link className="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors font-['Manrope'] antialiased tracking-tight" href="/events" >Explore Events</Link>
-<Link className="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 font-['Manrope'] antialiased tracking-tight" href="/clubs" >Clubs</Link>
-</div>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full gap-2">
-<span className="material-symbols-outlined text-outline" >search</span>
-<input className="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Search clubs..." type="text"/>
-</div>
-<div className="flex items-center gap-4">
-<button className="material-symbols-outlined text-slate-600 hover:scale-105 transition-all" >notifications</button>
-<button className="material-symbols-outlined text-slate-600 hover:scale-105 transition-all" >bookmark</button>
-<div className="h-10 w-10 rounded-full overflow-hidden hover:scale-105 transition-all cursor-pointer">
-<img alt="User profile" className="w-full h-full object-cover" data-alt="close-up portrait of a smiling university student with glasses in a soft-lit campus library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Ua78bW3unTD51JDtqw1zhqbdZKR0ICIbCRsneUHOoITx1AkV_2amNHB2Q-EaisVAYHFl6CaLW8VXWr-0yKDa4GafXm3Ca-I58zCxlcoG8Ao9dRrGhjJY0A7WuUCr5XPs8hE4dOy1FiDaTDXnyx39jTbBUotSin5IcziHg6-bIXxs2x4_aaim5KqTVL0fUErYd5aASmZpD6xIAMe3Tt9fD7mGNED92b1mI8oN_xeRpoGCFRvUQtcGI-q-DuCVk1tFn6gQZflHcgx6" />
-</div>
-</div>
-</div>
-</nav>
+
 {/* Main Content Canvas */}
 <main className="pt-32 pb-20 px-8 max-w-7xl mx-auto">
 {/* Hero Header Section */}
@@ -170,34 +149,7 @@ export default function Page() {
 </section>
 </main>
 {/* Footer */}
-<footer className="bg-slate-100 dark:bg-slate-950 w-full py-12 mt-20">
-<div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-<div className="col-span-1 md:col-span-1">
-<Link href="/"><span className="font-['Manrope'] font-bold text-slate-900 dark:text-slate-100 text-xl block mb-4" >CampusPulse</span></Link>
-<p className="font-['Inter'] text-sm text-slate-500 leading-relaxed" >© 2024 CampusPulse. Editorial Experience for Student Life.</p>
-</div>
-<div className="flex flex-col gap-3">
-<h4 className="font-bold text-on-surface text-sm uppercase tracking-widest mb-2 font-label" >Platform</h4>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >About</Link>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >Contact</Link>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >Support</Link>
-</div>
-<div className="flex flex-col gap-3">
-<h4 className="font-bold text-on-surface text-sm uppercase tracking-widest mb-2 font-label" >Legal</h4>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >Privacy</Link>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >Terms</Link>
-<Link className="text-slate-500 hover:text-indigo-500 font-['Inter'] text-sm transition-colors" href="/" >Cookies</Link>
-</div>
-<div className="flex flex-col gap-3">
-<h4 className="font-bold text-on-surface text-sm uppercase tracking-widest mb-2 font-label" >Connect</h4>
-<div className="flex gap-4">
-<button className="material-symbols-outlined text-slate-500 hover:text-indigo-500" >share</button>
-<button className="material-symbols-outlined text-slate-500 hover:text-indigo-500" >mail</button>
-<button className="material-symbols-outlined text-slate-500 hover:text-indigo-500" >public</button>
-</div>
-</div>
-</div>
-</footer>
+
     </>
   );
 }
