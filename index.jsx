@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./form.css";
 
 export default function JobApplicationForm() {
   const [formData, setFormData] = useState({
@@ -44,89 +45,93 @@ export default function JobApplicationForm() {
 
   if (submitted) {
     return (
-      <div>
-        <h2>Application submitted</h2>
-        <p>Thanks, {formData.name}!</p>
+      <div className="form-page">
+        <div className="success-card">
+          <h1>Application submitted</h1>
+          <p>Thanks, {formData.name}!</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Job application</h2>
+    <div className="form-page">
+      <form className="registration-form" onSubmit={handleSubmit}>
+        <h1>Job application</h1>
 
-      <div>
-        <label>Full name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
-      </div>
+        <div className="field">
+          <label>Full name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <p className="error-text">{errors.name}</p>}
+        </div>
 
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-      </div>
+        <div className="field">
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <p className="error-text">{errors.email}</p>}
+        </div>
 
-      <div>
-        <label>Phone</label>
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        {errors.phone && <p style={{ color: "red" }}>{errors.phone}</p>}
-      </div>
+        <div className="field">
+          <label>Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <p className="error-text">{errors.phone}</p>}
+        </div>
 
-      <div>
-        <label>Position applying for</label>
-        <select
-          name="position"
-          value={formData.position}
-          onChange={handleChange}
-        >
-          <option value="">Select a role</option>
-          <option value="Frontend engineer">Frontend engineer</option>
-          <option value="Backend engineer">Backend engineer</option>
-          <option value="Full-stack engineer">Full-stack engineer</option>
-          <option value="Product designer">Product designer</option>
-        </select>
-        {errors.position && <p style={{ color: "red" }}>{errors.position}</p>}
-      </div>
+        <div className="field">
+          <label>Position applying for</label>
+          <select
+            name="position"
+            value={formData.position}
+            onChange={handleChange}
+          >
+            <option value="">Select a role</option>
+            <option value="Frontend engineer">Frontend engineer</option>
+            <option value="Backend engineer">Backend engineer</option>
+            <option value="Full-stack engineer">Full-stack engineer</option>
+            <option value="Product designer">Product designer</option>
+          </select>
+          {errors.position && <p className="error-text">{errors.position}</p>}
+        </div>
 
-      <div>
-        <label>Years of experience</label>
-        <input
-          type="number"
-          name="experience"
-          value={formData.experience}
-          onChange={handleChange}
-        />
-        {errors.experience && <p style={{ color: "red" }}>{errors.experience}</p>}
-      </div>
+        <div className="field">
+          <label>Years of experience</label>
+          <input
+            type="number"
+            name="experience"
+            value={formData.experience}
+            onChange={handleChange}
+          />
+          {errors.experience && <p className="error-text">{errors.experience}</p>}
+        </div>
 
-      <div>
-        <label>Cover letter</label>
-        <textarea
-          name="coverLetter"
-          rows={4}
-          value={formData.coverLetter}
-          onChange={handleChange}
-        />
-        {errors.coverLetter && <p style={{ color: "red" }}>{errors.coverLetter}</p>}
-      </div>
+        <div className="field">
+          <label>Cover letter</label>
+          <textarea
+            name="coverLetter"
+            rows={4}
+            value={formData.coverLetter}
+            onChange={handleChange}
+          />
+          {errors.coverLetter && <p className="error-text">{errors.coverLetter}</p>}
+        </div>
 
-      <button type="submit">Submit application</button>
-    </form>
+        <button type="submit">Submit application</button>
+      </form>
+    </div>
   );
 }
